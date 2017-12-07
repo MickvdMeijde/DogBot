@@ -1,0 +1,6 @@
+# Removed config.json file
+config.json
+# removed node_modules
+/node_modules
+#removed startbot.bat
+startbot.bat
