@@ -31,7 +31,7 @@ client.on("message", async message =>{
 		let embed = new Discord.RichEmbed()
 			.addField("Prefix:", "My prefix is db!")
 			.addField("Commands:", "db!? - The help page you are currently on \ndb!info - Info about me \nmore WIP")
-			.addField("Moderation Commands:", "db!mute [mention] - I will mute the chosen person. \ndb!unmute [mention] - I will unmute the chosen person. \ndb!del <number of messages> - deletes the specified amount of messages. WIP")
+			.addField("Moderation Commands:", "db!mute [mention] - I will mute the chosen person. \ndb!unmute [mention] - I will unmute the chosen person. \ndb!del <number of messages> - deletes the specified amount of messages. WIP DO NOT USE!!!")
 			.addField("Dog Commands:", "db!sit - I can sit on command :3 \ndb!pet - I like getting pet :D \ndb!fetch - I can fetch like no other :3")
 		message.channel.send(embed);
 
@@ -129,9 +129,9 @@ client.on("message", async message =>{
 	if (command === `${prefix}del`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You do not have the required permissions to execute this command")
 
-		let messageCount = parseInt(numberofmessages);
+		let messageCount = parseInt( [1] );
  		message.channel.fetchMessages({limit: messageCount}).then(messages => message.channel.bulkDelete(messages));
- 		if(!messageCount) return message.channel.send("You did not specify a user");
+ 		if(!messageCount) return message.channel.send("You did not specify an amount");
 
  		return;
 	}
