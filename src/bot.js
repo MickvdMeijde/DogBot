@@ -1,4 +1,4 @@
-const settings = require ("../config.json");
+xxnconst settings = require ("../config.json");
 const package = require ("../package.json")
 const Discord = require("discord.js");
 const prefix = settings.prefix;
@@ -10,7 +10,9 @@ client.on("ready", async () => {
 	client.user.setGame("For help | db!?");
 	try {
 		let link = await client.generateInvite(["SEND_MESSAGES", "VIEW_CHANNEL", "VIEW_AUDIT_LOG", "ADD_REACTIONS", "MANAGE_CHANNELS", "BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "READ_MESSAGE_HISTORY", "USE_EXTERNAL_EMOJIS", "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "USE_VAD", "CHANGE_NICKNAME", "MANAGE_NICKNAMES", "MANAGE_ROLES", "MANAGE_WEBHOOKS", "MANAGE_EMOJIS"]);
+		console.log('---------------------------------------------------------------------------------------------------');
 		console.log(link);
+		console.log('---------------------------------------------------------------------------------------------------');
 	} catch(e) {
 		console.log(e.stack);
 	}
