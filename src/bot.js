@@ -132,8 +132,6 @@ client.on("message", async message =>{
  		if (!args.length === 0) return message.channel.send("You did not specify an amount");
 		message.channel.fetchMessages({limit: parseInt(args[0])}).then(messages => message.channel.bulkDelete(messages));
 		console.log(args)
-		if (args < 2) return message.channel.send ("an amount between 2 and 100 is required")
- 		if (!args.length === 0) return message.channel.send("You did not specify an amount");
  		return;
 	}
 
