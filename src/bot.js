@@ -1,4 +1,4 @@
-xxnconst settings = require ("../config.json");
+const settings = require ("../config.json");
 const package = require ("../package.json")
 const Discord = require("discord.js");
 const prefix = settings.prefix;
