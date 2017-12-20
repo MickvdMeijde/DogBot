@@ -4,5 +4,6 @@ config.json
 /node_modules
 # removed startbot.bat
 startbot.bat
-# no licensed image on github
+# no licensed images on github
 ban_image.jpg
+/images
