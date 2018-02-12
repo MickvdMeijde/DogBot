@@ -7,7 +7,7 @@ const client = new Discord.Client({disableEveryone: true});
 
 client.on("ready", async () => {
 	console.log(`bot is ready! ${client.user.username}`);
-	client.user.setGame("For help | db!?");
+	client.user.setGame("For help | db!help");
 	try {
 		let link = await client.generateInvite(["SEND_MESSAGES", "VIEW_CHANNEL", "VIEW_AUDIT_LOG", "ADD_REACTIONS", "MANAGE_CHANNELS", "BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "READ_MESSAGE_HISTORY", "USE_EXTERNAL_EMOJIS", "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "USE_VAD", "CHANGE_NICKNAME", "MANAGE_NICKNAMES", "MANAGE_ROLES", "MANAGE_WEBHOOKS", "MANAGE_EMOJIS"]);
 		console.log('---------------------------------------------------------------------------------------------------');
@@ -29,10 +29,10 @@ client.on("message", async message =>{
 	if(!command.startsWith(prefix)) return;
 
 	//help command
-	if (command === `${prefix}?`) {
+	if (command === `${prefix}help`) {
 		let embed = new Discord.RichEmbed()
 			.addField("Prefix:", "My prefix is db!")
-			.addField("Commands:", "db!? - The help page you are currently on \ndb!info - Info about me \nmore WIP")
+			.addField("Commands:", "db!help - The help page you are currently on \ndb!info - Info about me \nmore WIP")
 			.addField("Moderation Commands:", "db!mute [mention] - Mutes the selected user. \ndb!unmute [mention] - Unmutes the selected user. \ndb!del <number of messages> - Deletes the specified amount of messages.")
 			.addField("Dog Commands:", "db!sit - I can sit on command :3 \ndb!pet - I like getting pet :D \ndb!fetch - I can fetch like no other :3")
 		message.channel.send(embed);
