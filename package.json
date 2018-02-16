@@ -1,6 +1,6 @@
 {
   "name": "dogbot",
-  "version": "Beta 1.6.0",
+  "version": "Beta 1.7.5",
   "description": "Dog bot is your digital friend",
   "main": "bot.js",
   "scripts": {

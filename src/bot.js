@@ -41,10 +41,13 @@ client.on("message", async message =>{
 	}
 	//info
 	if (command === `${prefix}info`) {
+		const githubEmote= client.emojis.get(414049712057090059);
 		let embed = new Discord.RichEmbed()
 			.setAuthor(`${client.user.username}`, "https://cdn.discordapp.com/avatars/385108268177162240/d892ad2abd2ede2621a4d54e25f5ee22.webp?size=256)")
 			.addField("Version", `${package.version}`, true)
 			.addField("Creator", `${package.author}`, true)
+			.addField("running on", `${client.guilds.size} servers`, true)
+			.addField("contribute", `${githubbEmote} https://github.com/MickvdMeijde/DogBot`, true)
 		message.channel.send(embed);
 
 		return;
@@ -68,6 +71,14 @@ client.on("message", async message =>{
 
 		return;
 	}
+	//boop
+	if (command === `${prefix}boop`){
+		let toBoop = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+		if(!toBoop) return message.channel.send("You did not say who you want to boop ^-^");
+		if(toBoop.id === message.author.id) return message.channel.send("So selfish of you not to share your boops")
+		if(toMute.id === message.client.id) return message.channel.send("You can't mute yourself")
+	}
+
 	//moderating commands
 	//mute
 	if (command === `${prefix}mute`){
