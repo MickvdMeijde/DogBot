@@ -47,7 +47,7 @@ client.on("message", async message =>{
 			.addField("Version", `${package.version}`, true)
 			.addField("Creator", `${package.author}`, true)
 			.addField("running on", `${client.guilds.size} servers`, true)
-			.addField("contribute", `${githubbEmote} https://github.com/MickvdMeijde/DogBot`, true)
+			.addField("contribute", `${githubEmote} https://github.com/MickvdMeijde/DogBot`, true)
 		message.channel.send(embed);
 
 		return;
