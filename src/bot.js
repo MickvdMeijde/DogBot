@@ -33,7 +33,7 @@ client.on("message", async message =>{
 		let embed = new Discord.RichEmbed()
 			.addField("Prefix:", "My prefix is db!")
 			.addField("Commands:", "db!help - The help page you are currently on \ndb!info - Info about me \nmore WIP")
-			.addField("Moderation Commands:", "db!mute [mention] - Mutes the selected user. \ndb!unmute [mention] - Unmutes the selected user. \ndb!del <number of messages> - Deletes the specified amount of messages.")
+			.addField("Moderation Commands (i protecc uwu):", "db!mute [mention] - Mutes the selected user. \ndb!unmute [mention] - Unmutes the selected user. \ndb!del <number of messages> - Deletes the specified amount of messages.")
 			.addField("Dog Commands:", "db!sit - I can sit on command :3 \ndb!pet - I like getting pet :D \ndb!fetch - I can fetch like no other :3")
 		message.channel.send(embed);
 
