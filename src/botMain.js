@@ -15,7 +15,8 @@ client.on("ready", async () => {
 		console.log('---------------------------------------------------------------------------------------------------');
 		console.log(link);
 		console.log('---------------------------------------------------------------------------------------------------');
-	} catch(e) {
+	} catch(e) 
+	{
 		console.log(e.stack);
 	}
 });
@@ -31,9 +32,10 @@ client.on("message", async message =>{
 		command(message)
 			.catch(console.error)
 			.then;
+			
 	}
 
 	switch(addition) {
 
-});
+};
 client.login(settings.token);
