@@ -19,7 +19,7 @@ client.on("ready", async () => {
 	{
 		console.log(e.stack);
 	}
-});
+};
 
 client.on("message", async message =>{
 	if(message.author.bot) return;
@@ -32,7 +32,6 @@ client.on("message", async message =>{
 		command(message)
 			.catch(console.error)
 			.then;
-			
 	}
 
 	switch(addition) {
